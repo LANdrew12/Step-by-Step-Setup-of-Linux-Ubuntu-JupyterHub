@@ -23,6 +23,28 @@ Following step 4 and 5 from the Ubuntu website to complete the Ubuntu installati
 
 With our installation the installation of third party software for graphics and wifi hardware and additional media formats was selected to help with compatibility issues. 
 
+Finally using the updater all software updates were installed.
+
+# Setting up JupyterHub
+To install JupyterHub (JH), Python 3 must be installed first. 
+# Installing Python 3
+To install python first check if it is already installed by opening the terminal and type:
+```python3 --version```
+Followed by pressing 'enter'.
+Then type to update:
+```sudo apt update```
+Followed by pressing 'enter'.
+
+If it says which version you have that means the next python install steps can be skipped.
+
+If there is no version then type:
+```sudo apt install python3.8```
+Then press 'enter' and type password in (password wont show up for linux terminal) and press 'enter' again. 
+
+Now check the version of python installed by typing:
+```python3 --version```
+Followed by pressing 'enter'.
+
 
 
 
