@@ -45,7 +45,9 @@ Now check the version of python installed by typing:
 ```python3 --version```
 Followed by pressing 'enter'.
 
-
+# Installing JupyterHub
+To install JH follow the guide here:
+https://jupyterhub.readthedocs.io/en/stable/quickstart.html
 
 
 
