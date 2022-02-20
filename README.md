@@ -24,7 +24,31 @@ Following step 4 and 5 from the Ubuntu website to complete the Ubuntu installati
 With our installation the installation of third party software for graphics and wifi hardware and additional media formats was selected to help with compatibility issues. 
 
 Finally using the updater all software updates were installed.
+#####################
+# Setting up JupyterHub
+# installing Anaconda
+First open terminal and type:
+```cd ~```
+and press 'enter'
+Then type:
+```mkdir tmp```
+and press 'enter'
+Then type:
+```cd tmp```
+and press 'enter'
 
+Now open firefox and go to anaconda: https://www.anaconda.com/products/individual
+
+At the bottom of the page there is a clickable link that says: '64-Bit (x86) Installer (581 MB)' right click this link and click 'copy link address'
+
+Back in the terminal type:
+```wget https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh```
+but instead of the URL here right click and click paste after the wget. This will just ensure that the most up to date version of anaconda is installed. 
+
+
+
+
+#####################
 # Setting up JupyterHub
 To install JupyterHub (JH), Python 3 must be installed first. 
 # Installing Python 3
