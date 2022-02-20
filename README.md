@@ -45,6 +45,13 @@ Now check the version of python installed by typing:
 ```python3 --version```
 Followed by pressing 'enter'.
 
+
+
+#########should this be done prior to installing python and then use anaconda to install python?############
+# Installing Anaconda
+Follow the guide here to install Anaconda:
+https://phoenixnap.com/kb/how-to-install-anaconda-ubuntu-18-04-or-20-04
+
 # Installing JupyterHub
 To install JH follow the guide here:
 https://jupyterhub.readthedocs.io/en/stable/quickstart.html
