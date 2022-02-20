@@ -31,7 +31,7 @@ To install JupyterHub (JH), Python 3 must be installed first.
 To install python first check if it is already installed by opening the terminal and type:
 ```python3 --version```
 Followed by pressing 'enter'.
-Then type to update:
+Then type:
 ```sudo apt update```
 Followed by pressing 'enter'.
 
