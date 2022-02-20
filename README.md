@@ -1,5 +1,5 @@
 # Step-by-step-Linux-JupyterHub
-This guide is meant to help new users to deploy JupyterHub for the first time on a brand new machine. It will start from the installation of linux and go to setting up a safe and secure way to set up a home based server with remote access. The machine that is being used is a custom built computer and the specs will be listed at the bottom of this guide.
+This guide is meant to help new users deploy a JupyterHub server for the first time on a brand new machine. It will start from the installation of linux and go to setting up a safe and secure way to set up a home based server with remote access. The machine that is being used is a custom built computer and the specs will be listed at the bottom of this guide.
 
 # Setting up Linux for the first time
 Before getting started it is important to know the risks involved in a venture like this. Make sure all data is backed up on a separate device if it is important. 
