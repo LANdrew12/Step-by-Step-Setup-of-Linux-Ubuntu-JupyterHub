@@ -114,10 +114,58 @@ Type:
 ```y```
 and press 'enter'.
 
+# Installs using pip
 
+Type:
+```pip install Jupyterhub-systemdspawner```
+and press 'enter'.
 
+Type:
+```pip install psutil```
+and press 'enter'.
 
+Now that the those are installed, create a place for the condifuration files by typing:
+```sudo mkdir /opt/jupyterhub```
+and press 'enter' the type your computers password and press 'enter' (the password will not show up this is normal).
 
+Staying within the same environment type:
+```sudo python3 -m pip install jupyterlab```
+and press 'enter'.
+
+Then type:
+```sudo python3 -m pip install jupyterhub```
+and press 'enter'.
+
+Next type:
+```sudo python3 -m pip install psutil```
+and press 'enter'.
+
+# Install packages to sudo
+Type:
+```sudo apt-get install python3```
+and press 'enter'.
+
+Type:
+```sudo apt-get install python3-pip```
+and press 'enter'.
+
+Then type ```y``` and press 'enter'.
+
+Type:
+```sudo python3 -m pip install jupyterlab```
+and press 'enter'.
+
+Type:
+```sudo python3 -m pip install jupyterhub```
+and press 'enter'.
+
+Type:
+```sudo python3 -m pip install psutil```
+and press 'enter'.
+
+Type:
+```sudo python3 -m pip install jupyterhub-systemdspawner```
+and press 'enter'.
 
 
 
