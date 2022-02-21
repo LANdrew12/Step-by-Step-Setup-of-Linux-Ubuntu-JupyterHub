@@ -199,20 +199,46 @@ First delete the '#' symbol at the front of the code and change it to ```c.Jupyt
 Navigate to " c.Jupyterhub.shutdown_on_logout = False "
 First delete the '#' symbol at the front of the code and change it to ```c.Jupyterhub.shutdown_on_logout = True```
 
-# (Work In Progress) Creating self assigned ssl-certs
+# Creating self assigned ssl-certs
 Type:
 ```sudo mkdir /opt/jupyterhub/ssl-certs```
 and press 'enter' the type your computers password and press 'enter' (the password will not show up this is normal).
 
-########
-Cd /opt/jupyterhub/ssl-certs
-sudo openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout /opt/jupyterhub/ssl-certs/jhub.key -out /opt/jupyterhub/ssl-certs/jhub.crt
+Now, navigate to the newly created directory by typing:
+```cd /opt/jupyterhub/ssl-certs```
+and press 'enter'.
 
+Finally, create the ssl by typing:
+```sudo openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout /opt/jupyterhub/ssl-certs/jhub.key -out /opt/jupyterhub/ssl-certs/jhub.crt```
+and press 'enter' and filling out the questions asked to be given your key and cert.
 
+You will know if this is successful when launching the jupyterhub because all the text below the launch should be green. If you see yellow a repeat of the ssl creation should be done after restarting the computer. 
 
-# (Work In Progress) Change the default ssl_cert and ssl_key In the jupyterhub_config file
+# Change the default ssl_cert and ssl_key In the jupyterhub_config file
 c.JupyterHub.ssl_cert = ‘/opt/jupyterhub/ssl-certs/jhub.crt’
 c.JupyterHub.ssl_key = ‘/opt/jupyterhub/ssl-certs/jhub.key’
+
+# Setting Up to Run Across LAN
+Please be aware of security vulnerabilities when setting up any network devices. I am not a security expert so follow at your own risk. That being said I feel this is safe working within a private network. To set this up again we will edit the config file.
+
+In terminal tpye:
+```sudo gedit jupyterhub_config.py```
+and press 'enter' the type your computers password and press 'enter' (the password will not show up this is normal).
+
+Locate where the text ```c.JupyterHub.ip = ''``` is and change it to your computer's IPV4 address and put your own where it yes to replace ```c.JupyterHub.ip = '192.168.REPLACE.REPLACE'```
+
+Delete the '#' symbol infront of "c.JupyterHub.ip = ''"
+
+Next, Locate where the text ```c.JupyterHub.port = 8000``` is and change it to '433' so it looks like ```c.JupyterHub.ip = 433```
+
+Delete the '#' symbol infront of "c.JupyterHub.port = " 
+
+Save this document and relaunch JupyterHub.
+
+You should now be able to access Jupyterhub from other network devices by going to the browser and typing ```https://192.168.REPLACE.REPLACE:433``` but with your IPV4 address from the hosting computer instead of '192.168.REPLACE.REPLACE'.
+
+# Setting Up to Run as a Service
+
 
 # Starting JupyterHub from the Terminal
 Type:
