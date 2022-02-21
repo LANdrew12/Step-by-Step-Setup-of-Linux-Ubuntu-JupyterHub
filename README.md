@@ -239,6 +239,8 @@ Save this document and relaunch JupyterHub.
 
 You should now be able to access Jupyterhub from other network devices by going to the browser and typing ```https://192.168.REPLACE.REPLACE:433``` but with your IPV4 address from the hosting computer instead of '192.168.REPLACE.REPLACE'.
 
+The password and username for your JupyterHub login will be the same as your hosting computers password and username.
+
 # Setting Up to Run as a Service
 
 
