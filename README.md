@@ -25,9 +25,6 @@ With our installation the installation of third party software for graphics and 
 
 Finally using the updater all software updates were installed.
 
-#####################
-
-
 # Setting up JupyterHub
 # Installing Anaconda
 First open terminal and type:
@@ -114,7 +111,7 @@ Type:
 ```y```
 and press 'enter'.
 
-# Installs using pip
+# Install using pip
 
 Type:
 ```pip install Jupyterhub-systemdspawner```
@@ -202,44 +199,25 @@ First delete the '#' symbol at the front of the code and change it to ```c.Jupyt
 Navigate to " c.Jupyterhub.shutdown_on_logout = False "
 First delete the '#' symbol at the front of the code and change it to ```c.Jupyterhub.shutdown_on_logout = True```
 
+# Creating self assigned ssl-certs
+Type:
+```sudo mkdir /opt/jupyterhub/ssl-certs```
+and press 'enter' the type your computers password and press 'enter' (the password will not show up this is normal).
+
+########
+Cd /opt/jupyterhub/ssl-certs
+sudo openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout /opt/jupyterhub/ssl-certs/jhub.key -out /opt/jupyterhub/ssl-certs/jhub.crt
 
 
 
-#####################
-# Setting up JupyterHub
-To install JupyterHub (JH), Python 3 must be installed first. 
-# Installing Python 3
-To install python first check if it is already installed by opening the terminal and type:
-```python3 --version```
-Followed by pressing 'enter'.
-Then type:
-```sudo apt update```
-Followed by pressing 'enter'.
-
-If it says which version you have that means the next python install steps can be skipped.
-
-If there is no version then type:
-```sudo apt install python3.8```
-Then press 'enter' and type password in (password wont show up for linux terminal) and press 'enter' again. 
-
-Now check the version of python installed by typing:
-```python3 --version```
-Followed by pressing 'enter'.
-
-
-
-#########should this be done prior to installing python and then use anaconda to install python?############
-# Installing Anaconda
-Follow the guide here to install Anaconda:
-https://phoenixnap.com/kb/how-to-install-anaconda-ubuntu-18-04-or-20-04
-
-# Installing JupyterHub
-To install JH follow the guide here:
-https://jupyterhub.readthedocs.io/en/stable/quickstart.html
+# Change the default ssl_cert and ssl_key In the jupyterhub_config file
+c.JupyterHub.ssl_cert = ‘/opt/jupyterhub/ssl-certs/jhub.crt’
+c.JupyterHub.ssl_key = ‘/opt/jupyterhub/ssl-certs/jhub.key’
 
 
 
 
 
 
-#### list specs and versions ####
+
+#### list specs ####
