@@ -137,7 +137,7 @@ Next type:
 ```sudo python3 -m pip install psutil```
 and press 'enter'.
 
-# Install packages to sudo
+# Install Packages to Sudo
 Type:
 ```sudo apt-get install python3```
 and press 'enter'.
