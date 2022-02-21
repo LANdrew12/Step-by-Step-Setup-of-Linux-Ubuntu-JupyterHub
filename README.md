@@ -23,7 +23,7 @@ Following step 4 and 5 from the Ubuntu website to complete the Ubuntu installati
 
 With our installation the installation of third party software for graphics and wifi hardware and additional media formats was selected to help with compatibility issues. 
 
-Finally using the updater all software updates were installed.
+Finally using the updater application to update Linux after the installation of Ubuntu.
 
 # Setting up JupyterHub
 # Installing Anaconda
@@ -225,7 +225,7 @@ and press 'enter'
 
 The username and password will be the same as the account you are logged into. 
 
-
+To close the JupyterHub select the terminal window it is running in and press and hold 'control' and 'c' at the same time.
 
 
 
