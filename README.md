@@ -24,18 +24,23 @@ Following step 4 and 5 from the Ubuntu website to complete the Ubuntu installati
 With our installation the installation of third party software for graphics and wifi hardware and additional media formats was selected to help with compatibility issues. 
 
 Finally using the updater all software updates were installed.
+
 #####################
+
+
 # Setting up JupyterHub
-# installing Anaconda
+# Installing Anaconda
 First open terminal and type:
 ```cd ~```
-and press 'enter'
+and press 'enter'.
+
 Then type:
 ```mkdir tmp```
-and press 'enter'
+and press 'enter'.
+
 Then type:
 ```cd tmp```
-and press 'enter'
+and press 'enter'.
 
 Now open firefox and go to anaconda: https://www.anaconda.com/products/individual
 
@@ -43,7 +48,75 @@ At the bottom of the page there is a clickable link that says: '64-Bit (x86) Ins
 
 Back in the terminal type:
 ```wget https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh```
-but instead of the URL here right click and click paste after the wget. This will just ensure that the most up to date version of anaconda is installed. 
+(but instead of the URL here right click and click paste the URL you just copied with a space just after the wget. This will just ensure that the most up to date version of anaconda is installed.)
+Press 'enter'
+
+Next type:
+```ls```
+and press 'enter'.
+
+The output should look something like:
+'Anaconda3-2021.11-Linux-x86_64.sh'.
+
+To finish the install of Anaconda type:
+```bash Anaconda3-2021.11-Linux-x86_64.sh```
+Except replace the 'Anaconda3-2021.11-Linux-x86_64.sh' with the output from the last code.
+
+Now press 'enter' and keep pressing it until 'more' goes away at the bottom of the terminal and type 'yes' if you agree and finally 'yes' one more time. This will finish the installation of Anaconda. 
+
+Now type:
+```cd ~```
+and press 'enter'.
+
+Verify that conda is installed by typing:
+```source .bashrc```
+and pressing 'enter'.
+
+This should say base on the left of the screen.
+
+Then type:
+```conda --version```
+and press 'enter'. 
+
+This should say 'conda' followed by the version you installed. 
+
+
+# Creating the virtual environment for JupyterHub
+
+To create the virtual environment to use JupyterHub type:
+```conda create -n jhub python==3.8```
+and press 'enter'.
+type: 
+```y```
+and press 'enter'.
+
+To enter the virtual environment type:
+```conda activate jhub```
+and press 'enter'. 
+
+This should now have 'jhub' off to the left instead of 'base' from earlier.
+
+
+# Install JupyterHub
+Next, install JupyterHub by typing:
+```conda install -c conda-forge jupyterhub```
+and press 'enter'.
+
+Type:
+```y```
+and press 'enter'.
+
+And, type:
+```conda install -c conda-forge jupyterlab```
+and press 'enter'.
+
+Type:
+```y```
+and press 'enter'.
+
+
+
+
 
 
 
