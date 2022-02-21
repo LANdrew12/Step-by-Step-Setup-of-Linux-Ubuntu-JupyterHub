@@ -225,7 +225,9 @@ In terminal tpye:
 ```sudo gedit jupyterhub_config.py```
 and press 'enter' the type your computers password and press 'enter' (the password will not show up this is normal).
 
-Locate where the text ```c.JupyterHub.ip = ''``` is and change it to your computer's IPV4 address and put your own where it yes to replace ```c.JupyterHub.ip = '192.168.REPLACE.REPLACE'```
+Locate where the text ```c.JupyterHub.ip = ''``` is and change it to your computer's IPV4 address so it looks similar to this: 
+```c.JupyterHub.ip = '192.168.REPLACE.REPLACE'```
+(Replace '192.168.REPLACE.REPLACE' with your own IPV4 Address)
 
 Delete the '#' symbol infront of "c.JupyterHub.ip = ''"
 
