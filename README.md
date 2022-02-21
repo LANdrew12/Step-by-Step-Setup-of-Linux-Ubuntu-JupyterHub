@@ -199,7 +199,7 @@ First delete the '#' symbol at the front of the code and change it to ```c.Jupyt
 Navigate to " c.Jupyterhub.shutdown_on_logout = False "
 First delete the '#' symbol at the front of the code and change it to ```c.Jupyterhub.shutdown_on_logout = True```
 
-# Creating self assigned ssl-certs
+# (Work In Progress) Creating self assigned ssl-certs
 Type:
 ```sudo mkdir /opt/jupyterhub/ssl-certs```
 and press 'enter' the type your computers password and press 'enter' (the password will not show up this is normal).
@@ -210,7 +210,7 @@ sudo openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout /opt/jupyterhu
 
 
 
-# Change the default ssl_cert and ssl_key In the jupyterhub_config file
+# (Work In Progress) Change the default ssl_cert and ssl_key In the jupyterhub_config file
 c.JupyterHub.ssl_cert = ‘/opt/jupyterhub/ssl-certs/jhub.crt’
 c.JupyterHub.ssl_key = ‘/opt/jupyterhub/ssl-certs/jhub.key’
 
