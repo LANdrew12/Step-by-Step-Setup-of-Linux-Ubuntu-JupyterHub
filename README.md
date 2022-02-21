@@ -214,7 +214,16 @@ sudo openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout /opt/jupyterhu
 c.JupyterHub.ssl_cert = ‘/opt/jupyterhub/ssl-certs/jhub.crt’
 c.JupyterHub.ssl_key = ‘/opt/jupyterhub/ssl-certs/jhub.key’
 
+# Starting JupyterHub from the Terminal
+Type:
+```sudo jupyterhub```
+and press 'enter' the type your computers password and press 'enter' (the password will not show up this is normal).
 
+Open a 'Firefox" browser window and type in the url bar at the top:
+```localhost:8000```
+and press 'enter' 
+
+The username and password will be the same as the account you are logged into. 
 
 
 
