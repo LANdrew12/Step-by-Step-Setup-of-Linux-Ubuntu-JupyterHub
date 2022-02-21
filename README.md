@@ -1,4 +1,4 @@
-# Step-by-step-Linux-JupyterHub
+# Step-by-Step-Linux-JupyterHub
 This guide is meant to help new users deploy a JupyterHub server for the first time on a brand new computer. It will start from the installation of linux and go to setting up a safe and secure way to access a home based server with remote access. The machine that is being used is a custom built computer and the specs will be listed at the bottom of this guide.
 
 # Setting up Linux for the First Time
@@ -78,7 +78,7 @@ and press 'enter'.
 This should say 'conda' followed by the version you installed. 
 
 
-# Creating the virtual environment for JupyterHub
+# Creating the Virtual Environment for JupyterHub
 
 To create the virtual environment to use JupyterHub type:
 ```conda create -n jhub python==3.8```
@@ -111,7 +111,7 @@ Type:
 ```y```
 and press 'enter'.
 
-# Install using pip
+# Install Using Pip
 
 Type:
 ```pip install Jupyterhub-systemdspawner```
