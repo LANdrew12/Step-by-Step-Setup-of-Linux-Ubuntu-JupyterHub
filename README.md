@@ -167,6 +167,42 @@ Type:
 ```sudo python3 -m pip install jupyterhub-systemdspawner```
 and press 'enter'.
 
+Type:
+```sudo python3 -m pip install jupyterlab-system-monitor```
+and press 'enter'.
+
+Type:
+```sudo apt install nodejs npm```
+and press 'enter' and then type ```y``` and press 'enter'.
+
+Type:
+```sudo npm install -g configuratble-http-proxy```
+and press 'enter'.
+
+# Create a Configuration File
+To create a configuration file type:
+```sudo jupyterhub --generate-config```
+and press 'enter'.
+
+Now that we have a configuration file the next step is opening it and editing it. 
+To access it we will use 'gedit' but 'nano' is also a good way to edit the config file.
+
+To edit the file type:
+```sudo gedit jupyterhub_config.py```
+and press 'enter' the type your computers password and press 'enter' (the password will not show up this is normal).
+
+This should open a text file with a configuration settings that can be changed. 
+Navigate to " c.Spawner.default_url = '' "
+First delete the '#' symbol at the front of the code and change it to ```c.Spawner.default_url = '/lab'```
+
+Navigate to " c.JupyterHub.spawner_class = 'localprocess' "
+First delete the '#' symbol at the front of the code and change it to ```c.JupyterHub.spawner_class = 'systemdspawner.SystemdSpawner'```
+
+
+Navigate to " c.Jupyterhub.shutdown_on_logout = False "
+First delete the '#' symbol at the front of the code and change it to ```c.Jupyterhub.shutdown_on_logout = True```
+
+
 
 
 #####################
