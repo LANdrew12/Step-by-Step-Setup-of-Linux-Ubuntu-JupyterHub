@@ -4,7 +4,7 @@ This guide is meant to help new users deploy a JupyterHub server for the first t
 # Setting up Linux for the First Time
 Before getting started it is important to know the risks involved in installing Ubuntu on a machine with important data stored on it. It is very easy to delete everything on the computer during this process. It is recommended that everything is backed up prior to continuing. 
 
-# Creating the Ubuntu bootable USB drive
+### Creating the Ubuntu bootable USB drive
 You will need to use a USB storage drive with enough storage to hold the installation of Ubuntu. 
 The version of linux that will be installed is Ubuntu 20.04.3 LTS. For information regarding what it is and which one to install consult the Ubuntu website here:
 https://ubuntu.com/download/desktop
@@ -14,7 +14,7 @@ https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview
 
 The instructions for creating the boot media were followed on the website. 
 
-# Installation of Linux/Ubuntu
+### Installation of Linux/Ubuntu
 For our machine, some settings in the BIOS needed to be changed to allow for our system to be a dual boot Windows 11 and Ubuntu machine. The issue ended up being with 'fast boot' and 'secure boot' both were disabled to allow for our particular system to work properly in this configuration. Consult an expert to understand the risks involved with changing BIOS settings before changing these settings. 
 
 Now, to start the insallation you must access the 'BIOS' or the 'boot menu' which can be accessed differently depending on the computer you are working with. For our machine, the 'F2' or 'Delete' button can be used to access the UEFI BIOS during start up. Within the BIOS navigate to the 'boot' tab located at the top of the screen and select the boot media which Ubuntu is installed on. This should be in position number 1 on the order of bootable devices. If the USB drive is not showing up it may first try a different USB or restarting the computer then consult an expert. Also be sure to save the new boot order settings that were just changed prior to exiting the UEFI BIOS to begin the Ubuntu installation. 
@@ -26,7 +26,7 @@ With our installation the installation of third party software for graphics and 
 Finally using the updater application to update Linux after the installation of Ubuntu.
 
 # Setting up JupyterHub
-# Installing Anaconda
+### Installing Anaconda
 First open terminal and type:
 ```cd ~```
 and press 'enter'.
@@ -78,7 +78,7 @@ and press 'enter'.
 This should say 'conda' followed by the version you installed. 
 
 
-# Creating the Virtual Environment for JupyterHub
+### Creating the Virtual Environment for JupyterHub
 
 To create the virtual environment to use JupyterHub type:
 ```conda create -n jhub python==3.8```
@@ -94,7 +94,7 @@ and press 'enter'.
 This should now have 'jhub' off to the left instead of 'base' from earlier.
 
 
-# Install JupyterHub
+### Install JupyterHub
 Next, install JupyterHub by typing:
 ```conda install -c conda-forge jupyterhub```
 and press 'enter'.
@@ -111,7 +111,7 @@ Type:
 ```y```
 and press 'enter'.
 
-# Install Using Pip
+### Install Using Pip
 
 Type:
 ```pip install Jupyterhub-systemdspawner```
@@ -137,7 +137,7 @@ Next type:
 ```sudo python3 -m pip install psutil```
 and press 'enter'.
 
-# Install Packages to Sudo
+### Install Packages to Sudo
 Type:
 ```sudo apt-get install python3```
 and press 'enter'.
